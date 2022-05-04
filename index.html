@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark App</title>
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <section class="main">
+      <div class="background-design"></div>
+      <button class="btn-1 show-modal">Add Bookmark</button>
+      <div class="container"></div>
+    </section>
+    <div class="modal hidden">
+      <div class="top-modal">
+        <h2 class="heading-2">Add Bookmark</h2>
+        <button class="close close-modal btn-close" title="delete">×</button>
+      </div>
+      <form class="bookmark-form">
+        <div class="form-container">
+          <label for="name">Website Name</label>
+          <input type="text" id="name" />
+        </div>
+
+        <div class="form-container">
+          <label for="url">Website URL</label>
+          <input type="text" id="url" />
+        </div>
+        <button type="submit" class="btn-save">Save</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;600&display=swap');
+
+:root {
+  --primary-color: #c44569;
+  --border-radius: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Radio Canada', sans-serif;
+  box-sizing: border-box;
+}
+
+.main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+}
+
+.background-design {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('https://images.unsplash.com/photo-1527176930608-09cb256ab504?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80');
+  background-position: top;
+  background-size: cover;
+}
+
+.btn-1 {
+  background: none;
+  color: #303952;
+  font-family: inherit;
+  font-size: 3rem;
+  cursor: pointer;
+  background: white;
+  padding: 1rem 5rem;
+  border: 2px #303952 solid;
+  border-radius: var(--border-radius);
+  margin-top: 2rem;
+  transition: all 0.1s ease-out;
+  font-weight: 400;
+}
+
+.btn-1:hover {
+  color: rgba(235, 235, 235, 1);
+  background-color: #303952;
+}
+
+.btn-1:active {
+  transform: scale(0.98);
+}
+
+.close {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  padding: 0.2rem;
+  background: none;
+  border: none;
+  font-style: inherit;
+  color: rgb(202, 202, 202);
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.1s;
+}
+
+.close:hover {
+  color: white;
+}
+
+.close-modal {
+  color: white;
+  font-size: 3rem;
+  position: relative;
+  padding: 0;
+  transition: color 0.1s;
+}
+
+.close-modal:hover {
+  color: #5a6da0;
+}
+
+.container {
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 27.75rem);
+  gap: 5rem 3rem;
+}
+
+.item {
+  background-color: #303952;
+  color: rgb(202, 202, 202);
+  padding: 1.5rem 0;
+  border-radius: var(--border-radius);
+  transition: all 0.1s;
+  align-self: baseline;
+  position: relative;
+}
+
+.item a:link,
+.item a:visited {
+  font-size: 2rem;
+  color: rgb(202, 202, 202);
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.item a:hover {
+  color: white;
+}
+
+.name {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.name img {
+  height: 4rem;
+  width: 4rem;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 50px;
+  margin-right: 2rem;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: var(--border-radius);
+  z-index: 101;
+  width: 80rem;
+  overflow: hidden;
+}
+
+.top-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #303952;
+  padding: 3rem;
+}
+
+.heading-2 {
+  color: white;
+  font-size: 2rem;
+}
+
+.bookmark-form {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 1.6rem;
+  color: #303952;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 2px #303952 solid;
+  outline: none;
+}
+
+.btn-save {
+  cursor: pointer;
+  border: none;
+  background: none;
+  align-self: flex-start;
+  font-family: inherit;
+  color: white;
+  background-color: #303952;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem 5rem;
+  border-radius: 10px;
+  transition: all 0.1s;
+}
+
+.btn-save:hover {
+  background-color: #5a6da0;
+}
+
+.btn-save:active {
+  transform: scale(0.98);
+}
